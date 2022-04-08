@@ -1,0 +1,17 @@
+
+@import url('https://fonts.googleapis.com/css2?family=K2D:wght@500&display=swap');
+*{
+    font-family: 'K2D', sans-serif; 
+    background-color: #E5E5E5;
+    overflow-y: visible; 
+    overflow-x: visible;  
+}
+body{
+    background-color: #0A1235;
+    /* max-width: 1140px; */
+}
+html{
+    margin-left: auto;
+    margin-right:auto;
+    display:block;
+}

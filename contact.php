@@ -53,25 +53,26 @@
                                 <th>Phone Number</th>
                                 <th>Comment</th>
                             </tr>
-                            
-                                <?php
-                                require('backend/db.php');
-                                $sql = "SELECT member.name,member.surname,member.tel,comment.comment_detail FROM `member` INNER JOIN `comment` ON member.user_id=comment.user_id";
-                                $result = mysqli_query($conn, $sql);
-                                if (mysqli_num_rows($result) > 0) {
-                                    while ($row = mysqli_fetch_array($result)) {
-                                ?><tr>
+
+                            <?php
+                            require('backend/db.php');
+                            $sql = "SELECT member.name,member.surname,member.tel,comment.comment_detail FROM `member` INNER JOIN `comment` ON member.user_id=comment.user_id";
+                            $result = mysqli_query($conn, $sql);
+                            if (mysqli_num_rows($result) > 0) {
+                                while ($row = mysqli_fetch_array($result)) {
+                            ?>
+                                    <tr>
                                         <td><?php echo $row['name'] ?> </td>
                                         <td><?php echo $row['surname'] ?></td>
                                         <td><?php echo $row['tel'] ?></td>
                                         <td><?php echo $row['comment_detail'] ?></td>
                                 <?php
-                                    }
                                 }
+                            }
 
                                 ?>
 
-                            </tr>
+                                    </tr>
                         </table>
                     </div>
                 </div>

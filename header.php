@@ -25,19 +25,19 @@
                     <a class="nav-link active" aria-current="page" href="index.php">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link mx-2" href="contents.php">Contact</a>
+                    <a class="nav-link mx-2" href="contact.php">Contact</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link mx-2" href="#">Orders</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link mx-2" href="#">Manage</a>
+                    <a class="nav-link mx-2" href="manage.php">Manage</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link mx-2" href="signin.php">Sign In</a>
                 </li>
                 <li class="nav-item">
-                    <a class=" btn btn-outline-dark mx-2" href="#">Sign Up</a>
+                    <a class=" btn btn-outline-dark mx-2" href="add_user.php">Sign Up</a>
                 </li>
             </ul>
 

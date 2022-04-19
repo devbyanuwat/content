@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
-
 <head>
+    <?php session_start(); ?>
+    <?php error_reporting(0); ?>
     <?php require('style/bootstrap_5.php');  ?>
     <link rel="icon" type="image/png" sizes="16x16" href="/icon/mstile-150x150.png">
     <link rel="stylesheet" href="style/style.css">
@@ -17,6 +17,15 @@
 </head>
 
 <body>
+    <div class="container">
+        <iframe width="699" height="393" align="center" id="myFrame" src="https://www.youtube.com/embed/jbOTVZAm21M?list=RDjbOTVZAm21M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    </div>
+
+
+
+
+
     <div class="p-4 text-center" style="background-color: #0A1235;">
         <div class="row row-cols-3">
             <div class="col d-flex justify-content-center" style="background-color: #12234E;">

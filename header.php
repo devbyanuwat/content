@@ -33,11 +33,15 @@
                 <li class="nav-item">
                     <a class="nav-link mx-2" href="manage.php">Manage</a>
                 </li>
+                <?php ?>
                 <li class="nav-item">
                     <a class="nav-link mx-2" href="signin.php">Sign In</a>
                 </li>
                 <li class="nav-item">
                     <a class=" btn btn-outline-dark mx-2" href="add_user.php">Sign Up</a>
+                </li>
+                <li class="nav-item">
+                    <?php echo $_SESSION['username']; ?>
                 </li>
             </ul>
 

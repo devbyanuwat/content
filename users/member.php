@@ -44,7 +44,7 @@
             <div class="d-flex flex-wrap justify-content-center" style="background-color: #12234E;">
                 <?php while ($row = mysqli_fetch_assoc($result)) {
                 ?>
-                    <div class="col " style="margin:10px;background-color: #12234E;pointer-events: none;">
+                    <div class="col " style="margin:10px;background-color: #12234E;">
                         <iframe width="360" height="185" src="<?php echo $row['con_media']; ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
                     </div>
@@ -64,16 +64,6 @@
                 Motion Graphic With Adobe After Effect
             </div>
 
-        </div>
-        <div class="d-flex justify-content-center" style="background-color: #12234E;padding-top:20px">
-            <div class="col-4 d-flex justify-content-center" style="background-color: #12234E;"><img src="../img/week.png" style="background-color: #12234E;"></div>
-            <div class="col-4 d-flex justify-content-center" style="background-color: #12234E;"><img src="../img/month.png" style="background-color: #12234E;"></div>
-            <div class="col-4 d-flex justify-content-center" style="background-color: #12234E;"><img src="../img/year.png" style="background-color: #12234E;"></div>
-        </div>
-        <div class="d-flex justify-content-center" style="background-color: #12234E;">
-            <div class="col-4 d-flex justify-content-center" style="background-color: #12234E;"><a style="width: 50%;" href="order.php?category=week"> <img src="../img/btn_buynow.png" width="100%" style="background-color: #12234E;"></a></div>
-            <div class="col-4 d-flex justify-content-center" style="background-color: #12234E;"><a style="width: 50%;" href="order.php?category=month"> <img src="../img/btn_buynow.png" width="100%" style="background-color: #12234E;"></a></div>
-            <div class="col-4 d-flex justify-content-center" style="background-color: #12234E;"><a style="width: 50%;" href="order.php?category=year"> <img src="../img/btn_buynow.png" width="100%" style="background-color: #12234E;"></a></div>
         </div>
 
 

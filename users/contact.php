@@ -11,9 +11,32 @@
     <title>IT FRIEND</title>
 
     <?php session_start(); ?>
+    <?php require('../backend/user/chk_login.php'); ?>
     <?php require('header.php'); ?>
 
 </head>
+
+<style>
+    label {
+        color: black;
+        padding: 7px;
+        padding-left: 30px;
+        padding-right: 30px;
+        background-color: white;
+        border-radius: 55px;
+        margin-bottom: 20px;
+        width: 300px;
+        text-align: center;
+    }
+
+    .content-center {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        left: 50%;
+        right: 50%;
+    }
+</style>
 
 <body style="width: 100%;">
 
@@ -32,7 +55,7 @@
                 <form method="post" style="background-color: #0A1334;" action="../backend/user/comment.php?user_id=<?php echo $_SESSION['user_id']; ?>" class="d-md-flex justify-content-md-center">
                     <div class="text-white" style="background-color: #12234E;width: 75%;padding: 15px;  border-radius: 10px;">
                         <!-- <input type="hidden" name="user_id" value="<?php echo $user_id; ?>"> -->
-                        <div class="row">
+                        <div class="row ">
                             <div class="col" style="background-color: #12234E;">
                                 Firstname
                                 <input type="text" class="form-control" name="user_firstname" value="<?php echo $_SESSION["name"]; ?>" required>
@@ -59,6 +82,47 @@
                     </div>
                 </form>
 
+                <div class="d-md-flex justify-content-md-center" style="background-color: #0A1334;padding-top:20px">
+                    <div class="text-white" style="background-color: #12234E;width: 75%;padding: 15px;  border-radius: 10px;">
+                        <!-- <input type="hidden" name="user_id" value="<?php echo $user_id; ?>"> -->
+
+                        <div class="row">
+                            <div class="d-flex justify-content-center">
+                                <div class="col d-block ">
+                                    <div class="row" style="background-color: #12234E;">
+                                        <div class="col-5 d-flex justify-content-end" style="background-color: #12234E;"><img src="https://img.icons8.com/color/48/000000/facebook-new.png" style="background-color:#12234E;" width="40px" height="40px" /></div>
+                                        <div class=" col-6 d-flex justify-content-start" style="background-color: #12234E;"><label> IT Friend Page</label></div>
+                                    </div>
+
+                                    <div class="row " style="background-color: #12234E;">
+                                        <div class="col-5  d-flex justify-content-end" style="background-color: #12234E;"><img src="https://img.icons8.com/color/48/000000/internet--v1.png" style="background-color:#12234E;" width="40px" height="40px" /></div>
+                                        <div class=" col-6  d-flex justify-content-start" style="background-color: #12234E;"><label>www.itfriend.com</label></div>
+                                    </div>
+                                    <div class="row " style="background-color: #12234E;">
+                                        <div class="col-5 d-flex justify-content-end" style="background-color: #12234E;"><img src="https://img.icons8.com/color/48/000000/line-me.png" style="background-color:#12234E;" width="40px" height="40px" /></div>
+                                        <div class=" col-6 d-flex justify-content-start" style="background-color: #12234E;"><label> itfriend</label></div>
+                                    </div>
+                                    <div class="row " style="background-color: #12234E;">
+                                        <div class="col-5 d-flex justify-content-end" style="background-color: #12234E;"><img src="https://img.icons8.com/color/48/000000/ringer-volume.png" style="background-color:#12234E;" width="40px" height="40px" /></div>
+                                        <div class=" col-6 d-flex justify-content-start" style="background-color: #12234E;"><label> 021345678</label></div>
+                                    </div>
+                                    <div class="row " style="background-color: #12234E;">
+                                        <div class="col-5 d-flex justify-content-end" style="background-color: #12234E;"><img src="https://img.icons8.com/color/48/000000/marker--v1.png" style="background-color:#12234E;" width="40px" height="40px" /></div>
+                                        <div class=" col-6 d-flex justify-content-start" style="background-color: #12234E;"><label> อาคาร 52 <br>
+                                                ภาควิชาคอมพิวเตอร์ศึกษา <br>
+                                                คณะครุศาสตร์อุตสาหกรรม <br>
+                                                มหาวิทยาลัยเทคโนโลยี <br>
+                                                พระจอมเกล้าพระนครเหนือ</label></div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+    </div>
 </body>
+
+</html>

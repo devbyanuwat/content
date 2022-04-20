@@ -11,6 +11,7 @@
     <title>IT FRIEND</title>
     <!-- <?php session_destroy(); ?> -->
     <?php session_start(); ?>
+    <?php require('backend/user/chk_login.php'); ?>
     <?php require('header.php'); ?>
 
 </head>

@@ -3,14 +3,20 @@
 
 <head>
     <?php require('style/bootstrap_5.php');  ?>
-    <link rel="icon" type="image/png" sizes="16x16" href="/icon/mstile-150x150.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icon/mstile-150x150.png">
     <link rel="stylesheet" href="style/style.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IT FRIEND</title>
-    <!-- <?php session_destroy(); ?> -->
     <?php session_start(); ?>
+    <?php session_destroy(); ?>
+    <?php error_reporting(0); ?>
+    <?php
+    $_SESSION['username'] = "";
+    $_SESSION['ps_id'] = 0;
+    ?>
+
     <?php require('header.php'); ?>
 
 </head>

@@ -11,6 +11,7 @@
     <title>IT FRIEND</title>
     <!-- <?php session_destroy(); ?> -->
     <?php session_start(); ?>
+    <?php error_reporting(0); ?>
     <?php require('header.php'); ?>
 
 </head>
@@ -23,7 +24,7 @@
                 <div class="col pt-3 d-grid gap-2 d-md-flex justify-content-md-center" style="background-color: #0A1334;">
                     <div class="" style=" background-color: #0A1334;justify-content: center;">
                         <img src="img/LOGO1 9.png" style="border-radius: 10px;" alt="">
-                        <p class="fs-4 text-white pt-2" style="background-color: #0A1334;">Manage Add</p>
+                        <p class="fs-4 text-white pt-2 text-center" style="background-color: #0A1334;">Sign Up</p>
                     </div>
                 </div>
             </div>
@@ -55,11 +56,11 @@
                         </div>
                         <div class="row mt-3">
                             <div class="col-6 mx-auto" style="background-color: #12234E;">
-                                <button type="submit" class="btn-warning text-white" style="width: 100%;">Add</button>
+                                <button type="submit" class="btn btn-warning text-white" style="width: 100%;">Add</button>
 
                             </div>
                             <div class="col" style="background-color: #12234E;">
-                                <button style="background-color: #FF5D02;width: 100%;" class="text-white">Cancel</button>
+                                <a href="./" style="background-color: #FF5D02;width: 100%;" class="btn text-white">Cancel</a>
 
                             </div>
                         </div>

@@ -12,6 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IT FRIEND</title>
     <?php require('header.php'); ?>
+    <?php require('backend/user/chk_login.php'); ?>
 
     <img src="img/Homese_banner.png" class="img-fluid pb-4" width="100%">
 </head>

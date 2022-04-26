@@ -23,7 +23,7 @@
                 <div class="col pt-3 d-grid gap-2 d-md-flex justify-content-md-center" style="background-color: #0A1334;">
                     <div class="" style=" background-color: #0A1334;justify-content: center;">
                         <img src="img/LOGO1 9.png" style="border-radius: 10px;" alt="">
-                        <p class="fs-4 text-white pt-2" style="background-color: #0A1334;">Manage Add</p>
+                        <p class="fs-4 text-white pt-2 text-center" style="background-color: #0A1334;">Content Add</p>
                     </div>
                 </div>
             </div>

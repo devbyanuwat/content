@@ -3,7 +3,7 @@
 
 <head>
     <?php require('style/bootstrap_5.php');  ?>
-    <link rel="icon" type="image/png" sizes="16x16" href="/icon/mstile-150x150.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icon/mstile-150x150.png">
     <link rel="stylesheet" href="style/style.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">

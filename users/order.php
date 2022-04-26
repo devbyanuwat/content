@@ -14,6 +14,7 @@
     <?php require('header.php'); ?>
 
 </head>
+
 <?php $category = $_GET['category'];
 $price = 0;
 if ($category == "week") {
@@ -31,10 +32,10 @@ if ($category == "week") {
     <div class=" container">
         <div style="background-color: #0A1334;">
             <div class="row">
-                <div class="col pt-3 d-grid gap-2 d-md-flex justify-content-md-center" style="background-color: #0A1334;">
-                    <div class="" style=" background-color: #0A1334;justify-content: center;">
-                        <img src="img/LOGO1 9.png" style="border-radius: 10px;" alt="">
-                        <p class="fs-4 text-white pt-2" style="background-color: #0A1334;">Please fill out the information completely for easy payment.</p>
+                <div class="col pt-3 d-flex flex-wrap justify-content-center" style="background-color: #0A1334;">
+                    <div class="d-flex flex-wrap justify-content-center" style=" background-color: #0A1334">
+                        <img src="../img/LOGO1 9.png" style="border-radius: 10px;" alt="">
+                        <p class="fs-4 text-white pt-2 text-center" style="background-color: #0A1334;">Please fill out the information completely for easy payment.</p>
                     </div>
                 </div>
             </div>
@@ -63,17 +64,21 @@ if ($category == "week") {
                         </div>
                     </div>
                 </form>
-
-                <div style="background-color: #0A1334;padding-top:15px;padding-bottom: 15px;" class=" col d-md-flex justify-content-md-center">
-                    <div class=" text-white " style="background-color: #12234E;width: 75%;padding: 15px;  border-radius: 10px;">
-                        <div class="d-md-flex justify-content-md-center" style="background-color: #12234E;"> New to IT Friend? &nbsp
-                            <div class=" text-warning" style="background-color: #12234E;"> Create an account.</div>
-                        </div>
-                    </div>
-                </div>
-
             </div>
+
         </div>
+
+    </div>
+    <div class="d-flex justify-content-evenly" style="background-color: #0A1334;padding:20px">
+        <div class="col-3 d-flex justify-content-center" style="background-color: #0A1334;"><img src="../img/qr_week.png" width="50%" alt=""></div>
+        <div class="col-3 d-flex justify-content-center" style="background-color: #0A1334;"><img src="../img/qr_month.png" width="50%" alt=""></div>
+        <div class="col-3 d-flex justify-content-center" style="background-color: #0A1334;"><img src="../img/qr_year.png" width="50%" alt=""></div>
+    </div>
+    <div class="d-flex justify-content-evenly" style="background-color: #0A1334;padding:20px">
+        <div class="col-3 d-flex justify-content-center" style="background-color: #0A1334;">Week</div>
+        <div class="col-3 d-flex justify-content-center" style="background-color: #0A1334;">Month</div>
+        <div class="col-3 d-flex justify-content-center" style="background-color: #0A1334;">Year</div>
+    </div>
 </body>
 
 </html>

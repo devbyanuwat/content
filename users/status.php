@@ -44,17 +44,13 @@ mysqli_close($conn);
 <body>
 
     <div class=" container">
-        <?php
-        echo "<h1 class='text-white'>";
-        echo $_SESSION['ps_id'];
-        echo "</h1>";
-        ?>
+
         <div style="background-color: #0A1334;">
             <div class="row">
                 <div class="col pt-3 d-grid gap-2 d-md-flex justify-content-md-center" style="background-color: #0A1334;">
                     <div class="" style=" background-color: #0A1334;justify-content: center;">
                         <img src="../img/LOGO1 9.png" style="border-radius: 10px;" alt="">
-                        <p class="fs-4 text-white pt-2" style="background-color: #0A1334;">Sign in to IT Friend</p>
+                        <p class="fs-4 text-white pt-2 text-center" style="background-color: #0A1334;">IT Friend</p>
                     </div>
                 </div>
             </div>

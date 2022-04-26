@@ -42,7 +42,7 @@
                 </li> -->
                 <?php if ($_SESSION['username'] == "") { ?>
                     <li class="nav-item">
-                        <a class="nav-link mx-2" href="../signin.php">Sign In</a>
+                        <a class="nav-link mx-2" href="signin.php">Sign In</a>
                     </li>
                     <li class="nav-item">
                         <a class=" btn btn-outline-dark mx-2" href="../add_user.php">Sign Up</a>
@@ -51,7 +51,7 @@
 
                 <?php if ($_SESSION['username'] !== "") { ?>
                     <li class="nav-item">
-                        <!-- <?php echo $_SESSION['username']; ?> -->
+                        <?php echo $_SESSION['username']; ?>
                     </li>
                     <li class="nav-item">
                         <a class=" btn btn-outline-danger mx-2" href="../backend/user/logout.php">Sign Out</a>

@@ -25,7 +25,7 @@
         background-color: white;
         border-radius: 55px;
         margin-bottom: 20px;
-        width: 300px;
+        width: 400px;
         text-align: center;
     }
 
@@ -85,7 +85,10 @@
                 <div class="d-md-flex justify-content-md-center" style="background-color: #0A1334;padding-top:20px">
                     <div class="text-white" style="background-color: #12234E;width: 75%;padding: 15px;  border-radius: 10px;">
                         <!-- <input type="hidden" name="user_id" value="<?php echo $user_id; ?>"> -->
+                        <div class="" style=" background-color: #0A1334;justify-content: center;">
 
+                            <p class="fs-4 text-white pt-2" style="background-color: #0A1334;text-align: center;">Contact</p>
+                        </div>
                         <div class="row">
                             <div class="d-flex justify-content-center">
                                 <div class="col d-block ">
@@ -111,8 +114,7 @@
                                         <div class=" col-6 d-flex justify-content-start" style="background-color: #12234E;"><label> อาคาร 52 <br>
                                                 ภาควิชาคอมพิวเตอร์ศึกษา <br>
                                                 คณะครุศาสตร์อุตสาหกรรม <br>
-                                                มหาวิทยาลัยเทคโนโลยี <br>
-                                                พระจอมเกล้าพระนครเหนือ</label></div>
+                                                มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ</label></div>
                                     </div>
 
                                 </div>

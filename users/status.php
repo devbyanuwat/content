@@ -22,6 +22,10 @@
 $user_id = $_SESSION["user_id"];
 
 $sql = "SELECT * FROM `payment` WHERE `user_id` = $user_id ORDER BY `payment`.`pay_id` ASC";
+$pay_id = "";
+$ps_id = "";
+$pay_start = "";
+$pay_end = "";
 
 $result = mysqli_query($conn, $sql);
 if (mysqli_num_rows($result) > 0) {
@@ -38,6 +42,14 @@ if (mysqli_num_rows($result) > 0) {
     $pay_start = $row['pay_start'];
     $pay_end = $row['pay_end'];
 }
+
+
+$sql_member = "SELECT member.username FROM `payment` INNER JOIN `member` ON member.user_id=payment.user_id AND member.user_id=$user_id ORDER BY `member`.`username` DESC";
+$result_member = mysqli_query($conn, $sql_member);
+
+$row_member = mysqli_fetch_array($result_member);
+
+$member = $row_member['username'];
 mysqli_close($conn);
 ?>
 
@@ -58,11 +70,17 @@ mysqli_close($conn);
             <div class="row">
                 <div class="d-flex justify-content-center" style="background-color: #0A1334;">
                     <div class=" text-white " style="background-color: #12234E;width: 75%;padding: 15px;  border-radius: 10px;">
-                        <div style="background-color: #12234E;">
-                            <label for="user" class="form-label" style="background-color: #12234E;">Order ID</label>
-                            <input type="text" class="form-control" name="user" id="user" value="<?php echo $pay_id; ?>">
+                        <div style="background-color: #12234E;" class="d-flex">
+                            <div class="col-6" style="background-color: #12234E;padding:10px">
+                                <label for="user" class="form-label" style="background-color: #12234E;">Username</label>
+                                <input type="text" class="form-control" name="user" id="user" value="<?php echo $member; ?>">
+                            </div>
+                            <div class="col-6" style="background-color: #12234E;padding:10px">
+                                <label for="user" class="form-label" style="background-color: #12234E;">Order ID</label>
+                                <input type="text" class="form-control" name="user" id="user" value="<?php echo $pay_id; ?>">
+                            </div>
                         </div>
-                        <div style="background-color: #12234E;" class="mt-3">
+                        <div style="background-color: #12234E;padding:10px" class="mt-3">
                             <label for="password" class="form-label" style="background-color: #12234E;">Order Status</label>
                             <input type="text" class="form-control" name="password" value="<?php echo $ps_id; ?>">
                         </div>
@@ -80,9 +98,6 @@ mysqli_close($conn);
                                 </div>
                             </div>
                         </div>
-
-
-
                         <div class="d-grid " style="background-color: #12234E;">
                             <a href="./" class="btn btn-danger text-white mt-3" id="submit">Back</a>
                         </div>

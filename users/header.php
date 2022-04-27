@@ -21,9 +21,17 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarScroll">
             <ul class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="index.php">Home</a>
-                </li>
+                <?php if ($_SESSION['ps_id'] == 2) { ?>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="member.php">Home</a>
+                    </li>
+
+                <?php  } else { ?>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.php">Home</a>
+                    </li>
+                <?php   } ?>
+
                 <li class="nav-item">
                     <a class="nav-link mx-2" href="contact.php">Contact</a>
                 </li>
@@ -31,12 +39,7 @@
                     <a class="nav-link mx-2" href="status.php">Status</a>
                 </li>
 
-                <?php if ($_SESSION['ps_id'] == 2) { ?>
-                    <li class="nav-item">
-                        <a class=" mx-2 btn btn-outline-dark " href="member.php">Contents</a>
-                    </li>
 
-                <?php  } ?>
                 <!-- <li class="nav-item">
                     <a class="nav-link mx-2" href="manage.php">Manage</a>
                 </li> -->

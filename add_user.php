@@ -3,7 +3,7 @@
 
 <head>
     <?php require('style/bootstrap_5.php');  ?>
-    <link rel="icon" type="image/png" sizes="16x16" href="/icon/mstile-150x150.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icon/mstile-150x150.png">
     <link rel="stylesheet" href="style/style.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -44,7 +44,7 @@
                         </div>
                         <div class="col" style="background-color: #12234E;">
                             Tel.
-                            <input type="text" class="form-control" name="user_tel" required>
+                            <input type="tel" maxlength="10" class="form-control" name="user_tel" pattern="[0-9]{10}" placeholder="0812341234" required>
                         </div>
                         <div class="col" style="background-color: #12234E;">
                             Username

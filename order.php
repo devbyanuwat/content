@@ -75,8 +75,9 @@
 
                         <table style="width:100%" class="text-center ">
                             <tr>
-                                <!-- <th>Username</th> -->
+                                <th>#</th>
                                 <th>Order ID</th>
+                                <th>Username</th>
                                 <th>Price</th>
                                 <th>Edit</th>
                                 <th>Status</th>
@@ -87,32 +88,44 @@
                             require('backend/db.php');
                             $sql = "SELECT * FROM `payment` ORDER BY `pay_id` DESC";
                             $result = mysqli_query($conn, $sql);
+                            $i = 1;
+
+                            $sql_member = "SELECT member.username FROM `payment` INNER JOIN `member` ON member.user_id=payment.user_id ORDER BY `member`.`username` DESC";
+                            $result_member = mysqli_query($conn, $sql_member);
+
+                            $member = array("0");
+                            while ($row_member = mysqli_fetch_array($result_member)) {
+                                array_push($member, $row_member['username']);
+                            }
                             if (mysqli_num_rows($result) > 0) {
                                 while ($row = mysqli_fetch_array($result)) {
+
                             ?>
-                                    <tr>
-                                        <!-- <td><?php echo $row['name'] ?> </td> -->
-                                        <td><?php echo $row['pay_id'] ?></td>
-                                        <td><?php echo $row['pay_price'] ?></td>
-                                        <td><?php
-                                            if ($row['ps_id'] == 1) {
-                                                $ps_id = "Process";
-                                            } else if ($row['ps_id'] == 2) {
-                                                $ps_id = "Complete";
-                                            } else if ($row['ps_id'] == 3) {
-                                                $ps_id = "Failed";
-                                            }
-                                            echo $ps_id; ?></td>
-                                        <!-- <td><?php echo $row['pay_tel'] ?></td> -->
-                                        <td><a href="edit_order.php?pay_id=<?php echo $row['pay_id'] . "&ps_id=" .  $row['ps_id']; ?>"><img src="icon/edit_icon.png" width="15%" style="background-color: #FFFCFC;"></a></td>
-                                        <!-- <td><a href="backend/user/del.php?user_id=<?php echo $row['user_id'] ?>"><img src="icon/del_icon.png" width="15%" style="background-color: #FFFCFC;"></a></td> -->
-                                <?php
+                                    <td><?php echo $i; ?> </td>
+                                    <td><?php echo $row['pay_id'] ?></td>
+                                    <td><?php print_r($member[$i])  ?></td>
+                                    <td><?php echo $row['pay_price'] ?></td>
+                                    <td><?php
+                                        if ($row['ps_id'] == 1) {
+                                            $ps_id = "Process";
+                                        } else if ($row['ps_id'] == 2) {
+                                            $ps_id = "Complete";
+                                        } else if ($row['ps_id'] == 3) {
+                                            $ps_id = "Failed";
+                                        }
+                                        echo $ps_id; ?></td>
+                                    <!-- <td><?php echo $row['pay_tel'] ?></td> -->
+                                    <td><a href="edit_order.php?pay_id=<?php echo $row['pay_id'] . "&ps_id=" .  $row['ps_id']; ?>"><img src="icon/edit_icon.png" width="15%" style="background-color: #FFFCFC;"></a></td>
+                                    <!-- <td><a href="backend/user/del.php?user_id=<?php echo $row['user_id'] ?>"><img src="icon/del_icon.png" width="15%" style="background-color: #FFFCFC;"></a></td> -->
+                            <?php
+                                    $i++;
+                                    echo "</tr>";
                                 }
                             }
 
-                                ?>
+                            ?>
 
-                                    </tr>
+
                         </table>
                     </div>
                 </div>

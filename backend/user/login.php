@@ -35,7 +35,11 @@ if ($status == 2) {
         $row_ps_id = mysqli_fetch_assoc($result_ps_id);
         $_SESSION['ps_id'] = $row_ps_id['ps_id'];
     }
-    header('location:../../users/');
+    if ($_SESSION['ps_id'] == 2) {
+        header('location:../../users/member.php');
+    } else {
+        header('location:../../users/');
+    }
 } else if ($status == 1) {
     //admin
     header('location:../../');
